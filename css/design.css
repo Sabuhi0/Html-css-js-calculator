@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: ProximaNovaRegular;
+    src: url(../fonts/ProximaNova-Regular.woff2) format("woff2"), url(../fonts/ProximaNova-Regular.woff) format("woff");
+    font-display: swap
+}
+
+html {
+    font-size: 150%;
+    font-family: 'ProximaNovaRegular';
+    background-color: #4158D0;
+    background-image: linear-gradient(45deg, #4158D0 5%, #C850C0 35%, #f9703e 130%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    box-shadow: 0 0 25px 0 #0000004d;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.calculator-display {
+    background-color: #181b1d;
+    color: #f5f7fa;
+    width: 16rem;
+    padding: 20px 16px;
+    text-align: right;
+    font-size: 30px;
+}
+
+.calculator-keys {
+    background: #cbd2d9;
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas:
+        ". . . ."
+        "seven eight nine equal"
+        "four five six equal"
+        "one two three equal"
+        "zero decimal clear equal";
+}
+
+button {
+    background-color: #ffff;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    padding: 20px;
+    font: inherit;
+}
+
+.operator {
+    background-color: #e4e7eb;
+}
+
+.equal {
+    grid-area: equal;
+    background-color: #f9703e;
+}
