@@ -1,17 +1,17 @@
-// Start writing JavaScript here!
-const calculator = document.querySelector('.calculator')
-const keys = calculator.querySelector('.calculator__keys')
-const display = calculator.querySelector('.calculator__display')
-const operatorKeys = keys.querySelectorAll('[data-type="operator"]')
+// Start JavaScript!
+var calculator = document.querySelector('.calculator')
+var keys = calculator.querySelector('.calculator__keys')
+var display = calculator.querySelector('.calculator__display')
+var operatorKeys = keys.querySelectorAll('[data-type="operator"]')
 
 keys.addEventListener('click', event => {
   if (!event.target.closest('button')) return
 
-  const key = event.target
-  const keyValue = key.textContent
-  const displayValue = display.textContent
-  const { type } = key.dataset
-  const { previousKeyType } = calculator.dataset
+  var key = event.target
+  var keyValue = key.textContent
+  var displayValue = display.textContent
+  var { type } = key.dataset
+  var { previousKeyType } = calculator.dataset
 
   if (type === 'number') {
     if (
@@ -49,7 +49,7 @@ keys.addEventListener('click', event => {
   calculator.dataset.previousKeyType = type
 })
 
-function calculate (firstNumber, operator, secondNumber) {
+function calculate(firstNumber, operator, secondNumber) {
   firstNumber = parseInt(firstNumber)
   secondNumber = parseInt(secondNumber)
 
